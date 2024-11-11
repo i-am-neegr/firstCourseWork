@@ -1,6 +1,27 @@
 public class Main {
 
     public static void main(String[] args) {
+        EmployeeMap empMap = new EmployeeMap();
+
+        Employee employee1 = new Employee("John Lennon", 1, 1);
+        Employee employee2 = new Employee("Sid Vicious", 2, 2);
+        Employee employee3 = new Employee("Sid Barret", 3, 3);
+
+        empMap.addEmployee(employee1);
+        empMap.addEmployee(employee2);
+        empMap.addEmployee(employee3);
+        empMap.printAllEmployees();
+        printSeparator();
+
+        empMap.removeEmployee(employee1);
+        System.out.println(empMap.getEmployee("Sid Vicious"));
+        printSeparator();
+        Employee employee4 = new Employee("Sid Vicious", 4, 4);
+        empMap.addEmployee(employee4);
+        empMap.addEmployee(employee1);
+        empMap.printAllEmployees();
+
+
         EmployeeBook Book = new EmployeeBook();
         fillByEmployees(Book);
 
